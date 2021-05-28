@@ -33,7 +33,7 @@ class game:
 
             print ("many stuff")
             #exit()
-                pass
+                
             try:
 
                 self.user.manager.bot.bot.edit_message_text(text, self.user.id, self.user.board_id)
