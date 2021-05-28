@@ -27,7 +27,7 @@ class game:
             self.score += 1
             text = self.display()
             print (text)
-            self.user.manager.bot.bot.edit_message_text(text, self.user.id, self.user.board_id)
+            self.user.manager.bot.bot.edit_message_text("asdPf", self.user.id, self.user.board_id)
 
 
             time.sleep(0.3) 
