@@ -217,9 +217,9 @@ def main():
                             print (client.id)
                             if query: 
                                 message = query
-                            print ("\n\n\n\n\n\n\n\n")
-                            print ("message")
-                            print (message)
+                            #print ("\n\n\n\n\n\n\n\n")
+                            #print ("message")
+                            #print (message)
                             client.run(message)
 
                 else:
