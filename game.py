@@ -27,6 +27,13 @@ class game:
             self.score += 1
             text = self.display()
             print (text)
+
+            self.user.manager.bot.bot.edit_message_text(
+                    "Buttons", self.user.id, self.user.another_message, reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("←", callback_data='l'), InlineKeyboardButton("↑", callback_data='u'), InlineKeyboardButton("↓", callback_data='d'),InlineKeyboardButton("➜" , callback_data='r') ]]) )
+
+            print ("many stuff")
+            #exit()
+                pass
             try:
 
                 self.user.manager.bot.bot.edit_message_text(text, self.user.id, self.user.board_id)
