@@ -1,3 +1,4 @@
+from block import predefined_block
 import threading
 from block import block
 import time 
@@ -74,7 +75,11 @@ class game:
                 pass
 
         elif self.current_direction == 'cw':
-            pass
+            y = self.falling_star.y
+            x = self.falling_star.x
+            new_star  = predefined_block( self, y , x ,self.falling_star.cw())
+            if new_star.can_insert:
+                self.falling_star = new_star
         elif self.current_direction == 'ccw':
             pass
         else: 
