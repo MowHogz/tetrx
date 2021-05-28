@@ -25,6 +25,7 @@ class user:
         if self.count == 0:
             #first round 
             self.count += 1
+            self.board_id = self.send("This message should be the board").message_id
             self.another_message = self.send("This messsage should indicate what's going on, I think").message_id
             self.game = game(20 , 10)
             
