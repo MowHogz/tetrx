@@ -17,8 +17,9 @@ class game:
         self.t = threading.Thread(target= self.the_game, args=())
         self.score = 0 
         self.t.start()
-
         self.pending_direction = False
+
+        
     def the_game(self):
         while not self.out():
             self.round()
