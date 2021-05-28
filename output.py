@@ -4,7 +4,7 @@ def printer(matrix):
         text += "\n"
         for unit in row:
             if unit: 
-                text += "**"
+                text += "*"
             else: 
                 text += ",,"
             #text += str(unit)
