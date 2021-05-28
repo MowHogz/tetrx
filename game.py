@@ -6,8 +6,8 @@ from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 class game:
     def __init__(self, user, height, width):
         self.user = user 
-        self.default = "  "
-        self.full = "**"
+        self.default = False
+        self.full = True
         self.height = height
         self.width = width 
         self.matrix = creator(height,width,self.default)
