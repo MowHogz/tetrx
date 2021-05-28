@@ -55,8 +55,8 @@ class predefined_block:
         self.game = game
         self.y = y
         self.x = x
-        self.shape = random_shape()
-        self.shapes = shape
+        self.shape = shape
+        #self.shapes = shape
         self.height = len(self.shape)
         self.width = len(self.shape[0])
     def remove (self):
