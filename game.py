@@ -1,6 +1,8 @@
+import threading
 from block import block
 import time 
 from output import printer
+from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 class game:
     def __init__(self, height, width):
         self.default = False
@@ -12,10 +14,25 @@ class game:
         self.next_falling_star = block(self)
         self.start_y = 0
         self.start_x = 5
+        self.t = threading.Thread(target= self.the_game, args=())
+        self.score = 0 
     
-    
+    def the_game(self):
+        while self.not_out():
+            self.round()
+            self.score += 1
+            text = self.display()
+
+            self.user.manager.bot.bot.edit_message_text(text, self.user.id, self.user.board_id)
+
+
+            time.sleep(0.3) 
+
+    def display(self): 
+        text = ""
+
+        return text 
     def round(self):
-        time.sleep(0.3)
         
         self.update_move()#updates the current_direction variable 
 
@@ -48,8 +65,15 @@ class game:
             pass
 
         if self.gravity(): #
+            y = self.falling_star.y
+            x = self.falling_star.x
+            self.falling_star.insert(y, x)
             pass
         else: 
+            y = self.falling_star.y
+            x = self.falling_star.x
+            self.falling_star.insert(y, x)
+
             self.create_new_falling_star()
     
     
@@ -77,6 +101,8 @@ class game:
     def create_new_falling_star(self): #make there be a new falling star 
         self.falling_star = self.next_falling_star
         self.next_falling_star = block(self, self.start_y, self.start_x)
+        
+
         
 
 
