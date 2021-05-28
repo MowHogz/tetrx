@@ -16,6 +16,7 @@ class game:
         self.next_falling_star = block(self, self.start_y, self.start_x)
         self.t = threading.Thread(target= self.the_game, args=())
         self.score = 0 
+        self.t.start()
     
     def the_game(self):
         while self.not_out():
