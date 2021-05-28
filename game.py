@@ -19,7 +19,7 @@ class game:
         self.t.start()
     
     def the_game(self):
-        while self.not_out():
+        while not self.out():
             self.round()
             self.score += 1
             text = self.display()
@@ -28,7 +28,8 @@ class game:
 
 
             time.sleep(0.3) 
-
+    def out(self):
+        return False
     def display(self): 
         text = ""
 
