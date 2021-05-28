@@ -80,7 +80,7 @@ class game:
 
             print (self.falling_star.shape)
             print (self.falling_star.cw())
-            exit()
+            #exit()
             new_star  = predefined_block( self, y , x ,self.falling_star.cw())
             if new_star.can_insert:
                 self.falling_star = new_star
