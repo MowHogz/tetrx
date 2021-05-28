@@ -30,7 +30,7 @@ class game:
             print (text)
             try:
                 self.user.manager.bot.bot.edit_message_text(
-                        "Buttons", self.user.id, self.user.another_message, reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("←", callback_data='l'), InlineKeyboardButton("↑", callback_data='u'), InlineKeyboardButton("↓", callback_data='d'),InlineKeyboardButton("➜" , callback_data='r') ]]) )
+                        "Buttons", self.user.id, self.user.another_message, reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("←", callback_data='l'), InlineKeyboardButton("🔃", callback_data='cw'), InlineKeyboardButton("↓", callback_data='d'),InlineKeyboardButton("➜" , callback_data='r') ]]) )
             except:
                 print ("many stuff")
             #exit()
