@@ -35,6 +35,7 @@ class game:
         return False
     def display(self): 
         text = ""
+        text += printer(self.matrix)
 
         return text 
     def round(self):

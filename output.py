@@ -4,4 +4,4 @@ def printer(matrix):
         text += "\n"
         for unit in row:
             text += str(unit)
-    print (text)
+    return (text)
