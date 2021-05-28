@@ -82,8 +82,9 @@ class game:
             print (self.falling_star.cw())
             #exit()
             new_star  = predefined_block( self, y , x ,self.falling_star.cw())
-            if new_star.can_insert(y, x)):
+            if new_star.can_insert(y, x):
                 self.falling_star = new_star
+            
             else:
                 pass
         elif self.current_direction == 'ccw':
