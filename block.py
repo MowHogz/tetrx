@@ -27,7 +27,7 @@ class block:
 
 
     def can_insert(self, y, x):
-        if y < 0 or x < 0       or      y + self.height > self.game.height or x + self.width > self.game.width:
+        if y < 0 or x < 0       or      y + self.height >= self.game.height or x + self.width > self.game.width:
             return False
         for row in range(self.height):
             for column in range(self.width):
