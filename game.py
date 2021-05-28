@@ -104,6 +104,7 @@ class game:
             self.pending_direction = False
         
         else: 
+            self.current_direction = False
             pass
 
         
