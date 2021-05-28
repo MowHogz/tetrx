@@ -6,6 +6,6 @@ def printer(matrix):
             if unit: 
                 text += "**"
             else: 
-                text += "  "
+                text += ",,"
             #text += str(unit)
     return (text)
