@@ -10,10 +10,10 @@ class game:
         self.height = height
         self.width = width 
         self.matrix = creator(height,width,self.default)
-        self.falling_star = block(self)
-        self.next_falling_star = block(self)
         self.start_y = 0
         self.start_x = 5
+        self.falling_star = block(self, self.start_y, self.start_x)
+        self.next_falling_star = block(self, self.start_y, self.start_x)
         self.t = threading.Thread(target= self.the_game, args=())
         self.score = 0 
     
