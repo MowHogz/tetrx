@@ -26,7 +26,7 @@ class game:
             self.round()
             self.score += 1
             text = self.display()
-            #print (text)
+            print (text)
             try:
 
                 self.user.manager.bot.bot.edit_message_text(text, self.user.id, self.user.board_id)
