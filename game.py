@@ -74,6 +74,7 @@ class game:
             y = self.falling_star.y
             x = self.falling_star.x
             self.falling_star.insert(y, x)
+
             pass
         else: 
             y = self.falling_star.y
@@ -115,7 +116,7 @@ class game:
     def gravity(self): #returns True if piece is still falling 
         y = self.falling_star.y
         x = self.falling_star.x
-        if self.falling_star.can_insert(y + 1, x): #if we can go down by one 
+        if False: #self.falling_star.can_insert(y + 1, x): #if we can go down by one 
             self.falling_star.y = y + 1 
             return True
         else: 
