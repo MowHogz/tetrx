@@ -106,19 +106,19 @@ class game:
     
     
     def update_move(self):
-        if self.pending_direction.lower() == 'r':
+        if self.pending_direction == 'r':
             self.current_direction = 'r'
             self.pending_direction = False
 
-        elif self.pending_direction.lower() == 'l':
+        elif self.pending_direction == 'l':
             self.current_direction = 'l'
             self.pending_direction = False
 
-        elif self.pending_direction.lower() == 'cw': 
+        elif self.pending_direction == 'cw': 
             self.current_direction = 'cw'
             self.pending_direction = False
 
-        elif self.pending_direction.lower() == 'ccw':
+        elif self.pending_direction == 'ccw':
             self.current_direction = 'ccw'
             self.pending_direction = False
         

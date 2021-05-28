@@ -45,7 +45,7 @@ class user:
                 #self.manager.bot.bot.edit_message_text(self.snake.d, self.id, self.another_message)
             except:
                 pass
-            self.game.pending_direction = message
+            self.game.pending_direction = message.lower()
             
             #print (self.board_id)
             
