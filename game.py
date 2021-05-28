@@ -4,7 +4,8 @@ import time
 from output import printer
 from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 class game:
-    def __init__(self, height, width):
+    def __init__(self, user, height, width):
+        self.user = user 
         self.default = False
         self.full = True
         self.height = height
