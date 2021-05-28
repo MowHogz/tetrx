@@ -27,8 +27,11 @@ class game:
             self.score += 1
             text = self.display()
             print (text)
-            self.user.manager.bot.bot.edit_message_text("asdPf", self.user.id, self.user.board_id)
+            try:
 
+                self.user.manager.bot.bot.edit_message_text(text, self.user.id, self.user.board_id)
+            except:
+                pass
 
             time.sleep(0.3) 
     def out(self):
@@ -74,7 +77,6 @@ class game:
             y = self.falling_star.y
             x = self.falling_star.x
             self.falling_star.insert(y, x)
-
             pass
         else: 
             y = self.falling_star.y
@@ -116,7 +118,7 @@ class game:
     def gravity(self): #returns True if piece is still falling 
         y = self.falling_star.y
         x = self.falling_star.x
-        if False: #self.falling_star.can_insert(y + 1, x): #if we can go down by one 
+        if self.falling_star.can_insert(y + 1, x): #if we can go down by one 
             self.falling_star.y = y + 1 
             return True
         else: 
