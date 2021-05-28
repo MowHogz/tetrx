@@ -1,8 +1,9 @@
 from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 #2.0.0 - Beta 
 # we made some temporary changes (left commented out) used to send the album cover for Beta testing 
-from main import download
+#from main import download
 from snake import snake 
+from game import game 
 class user:
     def __init__(self,manager, client_info,location , message = " ", admin = False):
         
@@ -14,19 +15,7 @@ class user:
 
         self.id = client_info['id']
         self.location = location
-        self.download = download(self.location)
-        
         self.reset()
-
-    def reset(self):
-        self.count = 0 
-
-        
-        self.board_id = self.send("Good Game!\n Press Right to start again").message_id
-        
-    def start_new_game(self):
-        self.snake = snake(20,20,"Ruby", self)
-        self.snake.t.start()
 
     def send(self, message):
         return self.manager.bot.send_message(self.id, message)
@@ -36,7 +25,8 @@ class user:
             #first round 
             self.count += 1
             self.another_message = self.send("This messsage should indicate what's going on, I think").message_id
-            self.start_new_game()
+            self.game = game(20 , 10)
+            
                 
 
             #self.manager.bot.bot.edit_message_text(
@@ -48,13 +38,13 @@ class user:
             
             try:
                 print ("i got here")
-                print (self.snake.d)
+                
 
                 #self.manager.bot.bot.edit_message_text(self.snake.d, self.id, self.another_message)
             except:
                 pass
+            self.game.pending_direction = message
             
-            self.snake.direction = message
             #print (self.board_id)
             
             #self.snake.run(message)
