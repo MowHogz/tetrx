@@ -15,7 +15,7 @@ class user:
 
         self.id = client_info['id']
         self.location = location
-        self.reset()
+        #self.reset()
 
     def send(self, message):
         return self.manager.bot.send_message(self.id, message)
