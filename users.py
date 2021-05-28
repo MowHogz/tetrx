@@ -15,6 +15,7 @@ class user:
 
         self.id = client_info['id']
         self.location = location
+        self.count = 0 
         #self.reset()
 
     def send(self, message):
